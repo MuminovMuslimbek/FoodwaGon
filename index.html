@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#9f00a7">
+    <meta name="theme-color" content="#fff00">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FoodwaGon</title>
+</head>
+
+<body>
+    <div class="loader-container" id="loader" style="display: none;">
+        <dotlottie-player src="https://lottie.host/3545d3f9-76fc-48f9-9b84-1a4a7d169849/VH7RXft5zI.json"
+            background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay>
+        </dotlottie-player>
+    </div>
+    <div id="loader" class="loader-container" style="display: none;">
+        <div class="loader"></div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Foods not find!</h2>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+    <header>
+        <div class="header__container container">
+            <a href="index.html" class="logo">
+                <img src="images/icon/logo-icon.svg" alt="logo-icon">
+                <p>food <span>waGon</span></p>
+            </a>
+            <div class="header-text">
+                <span>Deliver to:</span>
+                <img src="images/icon/map-marker-alt.svg" alt="map">
+                <p>Current Location <strong>Mohammadpur Bus Stand, Dhaka</strong></p>
+            </div>
+            <div class="header-button">
+                <div class="header-search">
+                    <img src="images/icon/search.svg" alt="icon">
+                    <a>Search Food</a>
+
+
+                </div>
+                <a href="https://goodnes.vercel.app/pages/register.html"><button><img
+                            src="images/icon/user.svg">Login</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="starving">
+            <div class="starving__container container">
+                <div class="starving-title">
+                    <h1>Are you starving?</h1>
+                    <p>Within a few clicks, find meals that are accessible near you</p>
+                    <div class="send-masseg">
+                        <div class="send-masseg-btn">
+                            <button class="send-masseg-btn1"><img src="images/icon/motobike.svg">Delivery</button>
+                            <button class="send-masseg-btn2"><img src="images/icon/clock.svg">Pickup</button>
+                        </div>
+                        <hr>
+                        <div class="send-masseg-input">
+                            <img class="send-input" src="images/icon/lokation.svg" alt="icon">
+                            <input type="email" name="email" required placeholder="Enter Your Address">
+                            <button id="find-food-button" type="submit"><img src=" images/icon/search-btn.svg"
+                                    alt="icon">Find Food</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" starving-img ">
+                    <img class=" send-masseg-img " src=" images/starving-img.png " alt=" img " width=" 604px ">
+                </div>
+            </div>
+        </section>
+        <section class=" foodwagon-card-main ">
+            <div class=" foodwagon-card__container container ">
+                <div class=" foodwagon-card ">
+                    <img src=" images/foodwagon-card1.png " alt=" img ">
+                    <h3>Greys Vage</h3>
+                    <p>6 Days Remaining</p>
+                </div>
+                <div class=" foodwagon-card ">
+                    <img src=" images/foodwagon-card2.png " alt=" img ">
+                    <h3>Greys Vage</h3>
+                    <p>6 Days Remaining</p>
+                </div>
+                <div class=" foodwagon-card ">
+                    <img src=" images/foodwagon-card3.png " alt=" img ">
+                    <h3>Greys Vage</h3>
+                    <p>6 Days Remaining</p>
+                </div>
+                <div class=" foodwagon-card ">
+                    <img src=" images/foodwagon-card4.png " alt=" img ">
+                    <h3>Greys Vage</h3>
+                    <p>6 Days Remaining</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script id="loading-none" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"></script>
+    <dotlottie-player id="loading-none" src="https://lottie.host/3545d3f9-76fc-48f9-9b84-1a4a7d169849/VH7RXft5zI.json"
+        background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    <script src=" js/app.js "></script>
+</body>
+
+</html>

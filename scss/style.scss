@@ -1,0 +1,521 @@
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;800&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+::selection {
+    background: #849499;
+    color: #043E51;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #043E51;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #145E76;
+    border-radius: 50px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #849499;
+    cursor: grab;
+}
+
+ ::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+$color:#fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 16px 0;
+}
+
+.container {
+    max-width: 1384px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        p {
+            display: flex;
+            align-items: center;
+            font-family: "Source Sans Pro";
+            font-size: 31.11px;
+            font-weight: 700;
+            line-height: 37.33px;
+            letter-spacing: -0.025em;
+            color: #F17228;
+            span {
+                color: #FFB30E;
+            }
+        }
+    }
+    .header-text {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        span {
+            font-family: "Source Sans Pro";
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 18px;
+            color: #424242;
+        }
+        p {
+            margin: 0;
+            margin-left: -5px;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25.2px;
+            text-align: center;
+        }
+    }
+    .header-button {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            border: none;
+            background-color: $color;
+            box-shadow: 3px 10px 13px 0px rgba(0, 0, 0, 0.20);
+            -webkit-box-shadow: 3px 10px 13px 0px rgba(0, 0, 0, 0.20);
+            -moz-box-shadow: 3px 10px 13px 0px rgba(0, 0, 0, 0.51);
+            color: #FFB800;
+            font-family: "Source Sans Pro";
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 18px;
+            transition: 0.3s;
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+    .header-search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        a {
+            font-family: "Source Sans Pro";
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 18px;
+        }
+    }
+    @media (max-width:1115px) {
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    @media (max-width:604px) {
+        flex-direction: row;
+        justify-content: space-between;
+        .header-text,
+        .header-search {
+            display: none;
+        }
+    }
+    @media (max-width:380px) {
+        gap: 15px;
+        flex-direction: column;
+    }
+}
+
+.starving {
+    background-image: url(../images/starving-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 132px;
+}
+
+.starving__container {
+    @extend .header__container;
+    align-items: flex-end;
+    .starving-title {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-family: "Source Sans Pro";
+            font-size: 88px;
+            font-weight: 700;
+            line-height: 88px;
+            color: $color;
+        }
+        p {
+            font-family: "Source Sans Pro";
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 26.4px;
+            color: #504F4F;
+            margin: 15px 0 32px 0;
+        }
+        @media (max-width:1250px) {
+            h1 {
+                font-size: 68px;
+                line-height: 60px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        @media (max-width:604px) {
+            h1 {
+                font-size: 45px;
+                line-height: 40px;
+            }
+            p {
+                font-size: 14px;
+                margin: 10px 0 20px 0;
+            }
+        }
+    }
+    .send-masseg {
+        max-width: 665px;
+        width: 100%;
+        @extend .starving-title;
+        @media (max-width: 1250px) {
+            max-width: 100%;
+        }
+    }
+    .send-masseg-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 24px;
+        background-color: #fff;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        .send-masseg-btn1 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 8px;
+            font-family: "Source Sans Pro";
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 18px;
+            padding: 10px 24px;
+            border: none;
+            background-color: #F172281A;
+            color: #F17228;
+            cursor: pointer;
+        }
+        .send-masseg-btn2 {
+            @extend .send-masseg-btn1;
+            background: none;
+            border: none;
+            padding: 0;
+            color: #757575;
+        }
+    }
+    .send-masseg-input {
+        padding: 24px;
+        position: relative;
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        background-color: #fff;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        margin-bottom: 132px;
+        input {
+            max-width: 400px;
+            width: 100%;
+            padding: 11px 0 12px 46px;
+            background-color: #F5F5F5;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25.2px;
+            color: #9e9e9e;
+        }
+         ::placeholder {
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25.2px;
+            color: #9e9e9e;
+        }
+        .send-input {
+            position: absolute;
+            top: 40px;
+            left: 43px;
+        }
+        hr {
+            color: #aeaeae;
+        }
+        button {
+            max-width: 205px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Source Sans Pro";
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 18px;
+            color: $color;
+            padding: 24px 48px;
+            border-radius: 8px;
+            background-color: #F65900;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+        @media (max-width:1250px) {
+            input {
+                max-width: 300px;
+                width: 100%;
+            }
+            .send-input {
+                top: 35px;
+            }
+            button {
+                padding: 12px 24px;
+            }
+        }
+        @media (max-width:604px) {
+            flex-direction: column;
+            align-items: center;
+            input {
+                max-width: 100%;
+            }
+            button {
+                min-width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    .starving-img {
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: -3px;
+        img {
+            max-width: 500px;
+            width: 100%;
+        }
+    }
+    @media (max-width:1250px) {
+        gap: 50px;
+    }
+    @media (max-width:1115px) {
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .send-masseg-input {
+            margin-bottom: 0;
+        }
+    }
+    @media (max-width:604px) {
+        .send-masseg-btn {
+            justify-content: center;
+        }
+    }
+}
+
+.foodwagon-card-main {
+    padding: 80px 0;
+}
+
+.foodwagon-card__container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    .foodwagon-card {
+        max-width: 356px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        img {
+            max-width: 356px;
+            width: 100%;
+        }
+        h3 {
+            font-family: "Source Sans Pro";
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26.4px;
+            color: #424242;
+            margin: 32px 0 14px 0;
+        }
+        p {
+            max-width: 210px;
+            font-family: "Source Sans Pro";
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26.4px;
+            padding: 8px 16px;
+            background-color: #F1722833;
+            color: #F17228;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+    @media (max-width:910px) {
+        flex-wrap: wrap;
+        row-gap: 100px;
+    }
+    @media (max-width:750px) {
+        .foodwagon-card {
+            align-items: center;
+            h3 {
+                font-size: 35px;
+                margin-bottom: 30px;
+            }
+            p {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+body.loading {
+    pointer-events: none;
+    opacity: 0.7;
+    background-color: #0F1221;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #010b14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+    .modal-content {
+        background-color: #fff;
+        padding: 70px 150px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        margin: 0 15px;
+        transition: 0.3s;
+        h2 {
+            font-size: 50px;
+            color: #0F1221;
+        }
+        button {
+            background-color: #043E51;
+            color: white;
+            border: none;
+            padding: 15px 45px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 20px;
+            &:hover {
+                background-color: #001f3f;
+            }
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+        @media(max-width:635px) {
+            padding: 60px 100px;
+            gap: 40px;
+            h2 {
+                font-size: 40px;
+            }
+        }
+        @media (max-width:500px) {
+            padding: 40px 70px;
+            gap: 20px;
+            h2 {
+                font-size: 30px;
+            }
+            button {
+                padding: 13px 35px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+#loading-none {
+    display: none;
+}
